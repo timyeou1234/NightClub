@@ -1,0 +1,446 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6B4435A21F04E31D0092D665 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4435A11F04E31D0092D665 /* AppDelegate.swift */; };
+		6B4435A41F04E31D0092D665 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4435A31F04E31D0092D665 /* ViewController.swift */; };
+		6B4435A71F04E31D0092D665 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B4435A51F04E31D0092D665 /* Main.storyboard */; };
+		6B4435AA1F04E31D0092D665 /* NightClubCN.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6B4435A81F04E31D0092D665 /* NightClubCN.xcdatamodeld */; };
+		6B4435AC1F04E31D0092D665 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B4435AB1F04E31D0092D665 /* Assets.xcassets */; };
+		6B4435AF1F04E31D0092D665 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B4435AD1F04E31D0092D665 /* LaunchScreen.storyboard */; };
+		6B4435BA1F04E31D0092D665 /* NightClubCNTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4435B91F04E31D0092D665 /* NightClubCNTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6B4435B61F04E31D0092D665 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B4435961F04E31D0092D665 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B44359D1F04E31D0092D665;
+			remoteInfo = NightClubCN;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6B44359E1F04E31D0092D665 /* NightClubCN.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NightClubCN.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B4435A11F04E31D0092D665 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6B4435A31F04E31D0092D665 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6B4435A61F04E31D0092D665 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6B4435A91F04E31D0092D665 /* NightClubCN.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NightClubCN.xcdatamodel; sourceTree = "<group>"; };
+		6B4435AB1F04E31D0092D665 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6B4435AE1F04E31D0092D665 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6B4435B01F04E31D0092D665 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B4435B51F04E31D0092D665 /* NightClubCNTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NightClubCNTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B4435B91F04E31D0092D665 /* NightClubCNTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightClubCNTests.swift; sourceTree = "<group>"; };
+		6B4435BB1F04E31D0092D665 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6B44359B1F04E31D0092D665 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B4435B21F04E31D0092D665 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6B4435951F04E31D0092D665 = {
+			isa = PBXGroup;
+			children = (
+				6B4435A01F04E31D0092D665 /* NightClubCN */,
+				6B4435B81F04E31D0092D665 /* NightClubCNTests */,
+				6B44359F1F04E31D0092D665 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6B44359F1F04E31D0092D665 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B44359E1F04E31D0092D665 /* NightClubCN.app */,
+				6B4435B51F04E31D0092D665 /* NightClubCNTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6B4435A01F04E31D0092D665 /* NightClubCN */ = {
+			isa = PBXGroup;
+			children = (
+				6B4435A11F04E31D0092D665 /* AppDelegate.swift */,
+				6B4435A31F04E31D0092D665 /* ViewController.swift */,
+				6B4435A51F04E31D0092D665 /* Main.storyboard */,
+				6B4435AB1F04E31D0092D665 /* Assets.xcassets */,
+				6B4435AD1F04E31D0092D665 /* LaunchScreen.storyboard */,
+				6B4435B01F04E31D0092D665 /* Info.plist */,
+				6B4435A81F04E31D0092D665 /* NightClubCN.xcdatamodeld */,
+			);
+			path = NightClubCN;
+			sourceTree = "<group>";
+		};
+		6B4435B81F04E31D0092D665 /* NightClubCNTests */ = {
+			isa = PBXGroup;
+			children = (
+				6B4435B91F04E31D0092D665 /* NightClubCNTests.swift */,
+				6B4435BB1F04E31D0092D665 /* Info.plist */,
+			);
+			path = NightClubCNTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6B44359D1F04E31D0092D665 /* NightClubCN */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B4435BE1F04E31D0092D665 /* Build configuration list for PBXNativeTarget "NightClubCN" */;
+			buildPhases = (
+				6B44359A1F04E31D0092D665 /* Sources */,
+				6B44359B1F04E31D0092D665 /* Frameworks */,
+				6B44359C1F04E31D0092D665 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NightClubCN;
+			productName = NightClubCN;
+			productReference = 6B44359E1F04E31D0092D665 /* NightClubCN.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6B4435B41F04E31D0092D665 /* NightClubCNTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B4435C11F04E31D0092D665 /* Build configuration list for PBXNativeTarget "NightClubCNTests" */;
+			buildPhases = (
+				6B4435B11F04E31D0092D665 /* Sources */,
+				6B4435B21F04E31D0092D665 /* Frameworks */,
+				6B4435B31F04E31D0092D665 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B4435B71F04E31D0092D665 /* PBXTargetDependency */,
+			);
+			name = NightClubCNTests;
+			productName = NightClubCNTests;
+			productReference = 6B4435B51F04E31D0092D665 /* NightClubCNTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6B4435961F04E31D0092D665 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Wework;
+				TargetAttributes = {
+					6B44359D1F04E31D0092D665 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = FBND9EJP2C;
+						ProvisioningStyle = Automatic;
+					};
+					6B4435B41F04E31D0092D665 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = FBND9EJP2C;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6B44359D1F04E31D0092D665;
+					};
+				};
+			};
+			buildConfigurationList = 6B4435991F04E31D0092D665 /* Build configuration list for PBXProject "NightClubCN" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6B4435951F04E31D0092D665;
+			productRefGroup = 6B44359F1F04E31D0092D665 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6B44359D1F04E31D0092D665 /* NightClubCN */,
+				6B4435B41F04E31D0092D665 /* NightClubCNTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6B44359C1F04E31D0092D665 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B4435AF1F04E31D0092D665 /* LaunchScreen.storyboard in Resources */,
+				6B4435AC1F04E31D0092D665 /* Assets.xcassets in Resources */,
+				6B4435A71F04E31D0092D665 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B4435B31F04E31D0092D665 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6B44359A1F04E31D0092D665 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B4435A41F04E31D0092D665 /* ViewController.swift in Sources */,
+				6B4435AA1F04E31D0092D665 /* NightClubCN.xcdatamodeld in Sources */,
+				6B4435A21F04E31D0092D665 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B4435B11F04E31D0092D665 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B4435BA1F04E31D0092D665 /* NightClubCNTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6B4435B71F04E31D0092D665 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B44359D1F04E31D0092D665 /* NightClubCN */;
+			targetProxy = 6B4435B61F04E31D0092D665 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6B4435A51F04E31D0092D665 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B4435A61F04E31D0092D665 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6B4435AD1F04E31D0092D665 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B4435AE1F04E31D0092D665 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6B4435BC1F04E31D0092D665 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6B4435BD1F04E31D0092D665 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6B4435BF1F04E31D0092D665 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FBND9EJP2C;
+				INFOPLIST_FILE = NightClubCN/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Wework.com.tw.NightClubCN;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		6B4435C01F04E31D0092D665 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FBND9EJP2C;
+				INFOPLIST_FILE = NightClubCN/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Wework.com.tw.NightClubCN;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		6B4435C21F04E31D0092D665 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = FBND9EJP2C;
+				INFOPLIST_FILE = NightClubCNTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Wework.com.tw.NightClubCNTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NightClubCN.app/NightClubCN";
+			};
+			name = Debug;
+		};
+		6B4435C31F04E31D0092D665 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = FBND9EJP2C;
+				INFOPLIST_FILE = NightClubCNTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Wework.com.tw.NightClubCNTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NightClubCN.app/NightClubCN";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6B4435991F04E31D0092D665 /* Build configuration list for PBXProject "NightClubCN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B4435BC1F04E31D0092D665 /* Debug */,
+				6B4435BD1F04E31D0092D665 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B4435BE1F04E31D0092D665 /* Build configuration list for PBXNativeTarget "NightClubCN" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B4435BF1F04E31D0092D665 /* Debug */,
+				6B4435C01F04E31D0092D665 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6B4435C11F04E31D0092D665 /* Build configuration list for PBXNativeTarget "NightClubCNTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B4435C21F04E31D0092D665 /* Debug */,
+				6B4435C31F04E31D0092D665 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6B4435A81F04E31D0092D665 /* NightClubCN.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6B4435A91F04E31D0092D665 /* NightClubCN.xcdatamodel */,
+			);
+			currentVersion = 6B4435A91F04E31D0092D665 /* NightClubCN.xcdatamodel */;
+			path = NightClubCN.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 6B4435961F04E31D0092D665 /* Project object */;
+}
