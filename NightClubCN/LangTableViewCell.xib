@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="LangTableViewCell" customModule="NightClubCN" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lz8-H9-Rst">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Eka-uZ-Gl9">
+                        <rect key="frame" x="20" y="11" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-checkmark_filled" translatesAutoresizingMaskIntoConstraints="NO" id="kMk-7f-iII">
+                        <rect key="frame" x="270" y="6" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="VJl-h6-QdI"/>
+                            <constraint firstAttribute="width" constant="30" id="dQg-Dt-AhF"/>
+                        </constraints>
+                    </imageView>
+                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lzz-pe-XOO">
+                        <rect key="frame" x="0.0" y="42.5" width="320" height="1"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="weh-hu-i10"/>
+                        </constraints>
+                        <color key="progressTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="trackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </progressView>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="Eka-uZ-Gl9" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="4Pv-Cg-ZRK"/>
+                    <constraint firstAttribute="trailing" secondItem="lzz-pe-XOO" secondAttribute="trailing" id="5P9-KE-XAd"/>
+                    <constraint firstItem="lzz-pe-XOO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="SF8-z2-C3L"/>
+                    <constraint firstItem="Lz8-H9-Rst" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="cOr-Ez-adH"/>
+                    <constraint firstAttribute="trailing" secondItem="kMk-7f-iII" secondAttribute="trailing" constant="20" id="fKa-Ia-O2c"/>
+                    <constraint firstAttribute="bottom" secondItem="Lz8-H9-Rst" secondAttribute="bottom" id="gBe-uy-S17"/>
+                    <constraint firstItem="Eka-uZ-Gl9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="hFj-Fp-QqE"/>
+                    <constraint firstItem="Lz8-H9-Rst" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="lCx-1V-YEJ"/>
+                    <constraint firstAttribute="trailing" secondItem="Lz8-H9-Rst" secondAttribute="trailing" id="m91-6n-Uo9"/>
+                    <constraint firstItem="kMk-7f-iII" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="sGi-IE-n3n"/>
+                    <constraint firstAttribute="bottom" secondItem="lzz-pe-XOO" secondAttribute="bottom" id="zBS-g3-zvO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="detailImageView" destination="kMk-7f-iII" id="NuR-U4-agP"/>
+                <outlet property="detailLable" destination="Eka-uZ-Gl9" id="jch-rY-5SP"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icons8-checkmark_filled" width="25" height="25"/>
+    </resources>
+</document>

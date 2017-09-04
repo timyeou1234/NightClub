@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="StarCollectionViewCell" customModule="NightClubCN" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="145" height="184"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="145" height="184"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0wj-jo-e6S">
+                        <rect key="frame" x="0.0" y="0.0" width="145" height="145"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="0wj-jo-e6S" secondAttribute="height" id="wiL-wk-dd4"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1VE-h7-UoB">
+                        <rect key="frame" x="49" y="154" width="47" height="21"/>
+                        <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="18"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="1VE-h7-UoB" firstAttribute="top" secondItem="0wj-jo-e6S" secondAttribute="bottom" constant="9" id="1Is-0h-jaC"/>
+                <constraint firstAttribute="trailing" secondItem="0wj-jo-e6S" secondAttribute="trailing" id="8Z7-kd-IZX"/>
+                <constraint firstItem="0wj-jo-e6S" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="bbv-I5-Su9"/>
+                <constraint firstAttribute="bottom" secondItem="1VE-h7-UoB" secondAttribute="bottom" constant="9" id="eow-2t-MFJ"/>
+                <constraint firstItem="1VE-h7-UoB" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="qJc-0c-D2w"/>
+                <constraint firstItem="0wj-jo-e6S" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="sGA-ng-s0h"/>
+            </constraints>
+            <size key="customSize" width="145" height="184"/>
+            <connections>
+                <outlet property="imageView" destination="0wj-jo-e6S" id="NKx-Yy-JlN"/>
+                <outlet property="titleLable" destination="1VE-h7-UoB" id="4vu-L4-YPK"/>
+            </connections>
+            <point key="canvasLocation" x="80.5" y="109"/>
+        </collectionViewCell>
+    </objects>
+</document>
