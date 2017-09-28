@@ -2,8 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 	<key>CFBundleDevelopmentRegion</key>
-	<string>en</string>
+	<string>zh-Hant</string>
 	<key>CFBundleDisplayName</key>
 	<string>酷派客</string>
 	<key>CFBundleExecutable</key>
@@ -17,7 +19,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.2</string>
+	<string>1.0.3</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
@@ -32,7 +34,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>8</string>
+	<string>1</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>wechat</string>
@@ -51,11 +53,11 @@
 		<true/>
 	</dict>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>To get user's location</string>
+	<string>To get user&apos;s location</string>
 	<key>NSLocationUsageDescription</key>
-	<string>To get user's location</string>
+	<string>To get user&apos;s location</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>To get user's location</string>
+	<string>To get user&apos;s location</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Weibo Use</string>
 	<key>UILaunchStoryboardName</key>

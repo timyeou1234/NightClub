@@ -33,6 +33,7 @@ class PartyNewsDetailViewController: UIViewController, BackDelegate{
         sliderCountLable.text = "1/\(party.imgSlider?.count ?? 1)"
         tagList.removeAllTags()
         tagList.addTags(party.tag!)
+        tagList.addTagsWithAttribute(party.location_tag!)
         adButton.setTitle(party.ad_tag, for: .normal)
         titleLable.text = party.title
         contentLable.text = party.content
@@ -40,7 +41,17 @@ class PartyNewsDetailViewController: UIViewController, BackDelegate{
     }
     
     @IBAction func adAction(_ sender: Any) {
-        
+        if let url = party.ad_link{
+            guard let url = URL(string: url) else {
+                return //be safe
+            }
+            
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+        }
     }
     
     override func viewDidLoad() {
@@ -106,6 +117,23 @@ class PartyNewsDetailViewController: UIViewController, BackDelegate{
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func share(){
+        if let share = party.shareinfo{
+            let myWebsite = NSURL(string: share)
+            
+            guard let url = myWebsite else {
+                print("nothing found")
+                return
+            }
+            
+            let shareItems:Array = [url]
+            let activityViewController:UIActivityViewController = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
+            activityViewController.excludedActivityTypes = [UIActivityType.print, UIActivityType.postToWeibo, UIActivityType.copyToPasteboard, UIActivityType.addToReadingList, UIActivityType.postToVimeo]
+            activityViewController.popoverPresentationController?.sourceView = self.view
+            self.present(activityViewController, animated: true, completion: nil)
+        }
     }
     
     func back() {
@@ -197,6 +225,13 @@ extension PartyNewsDetailViewController:UICollectionViewDataSource, UICollection
                         }
                         if let tag = party["tag"].string{
                             partyDetail.tag = tag.components(separatedBy: ",")
+                        }
+                        if let location_tag = party["location_tag"].string{
+                            var locationList = [String]()
+                            for location in location_tag.components(separatedBy: ","){
+                                locationList.append(location)
+                            }
+                            partyDetail.location_tag = locationList
                         }
                         if let ad_tag = party["ad_tag"].string{
                             partyDetail.ad_tag = ad_tag

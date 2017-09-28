@@ -27,6 +27,23 @@ class PartyNewsViewController: UIViewController, IndicatorInfoProvider{
     @IBAction func cell1Action(_ sender: Any) {
         performSegue(withIdentifier: "detailSegue", sender: partyList[0].id)
     }
+    
+    @IBAction func share(_ sender: Any) {
+        if let share = partyList[0].shareinfo{
+            let myWebsite = NSURL(string: share)
+            
+            guard let url = myWebsite else {
+                print("nothing found")
+                return
+            }
+            
+            let shareItems:Array = [url]
+            let activityViewController:UIActivityViewController = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
+            activityViewController.excludedActivityTypes = [UIActivityType.print, UIActivityType.postToWeibo, UIActivityType.copyToPasteboard, UIActivityType.addToReadingList, UIActivityType.postToVimeo]
+            activityViewController.popoverPresentationController?.sourceView = self.view
+            self.present(activityViewController, animated: true, completion: nil)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -112,6 +129,7 @@ extension PartyNewsViewController: UITableViewDelegate, UITableViewDataSource, U
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PartyTableViewCell
         let party = partyList[indexPath.row]
+        cell.sourceViewController = self
         cell.party = party
         cell.titleLable.text = party.title
         cell.tagList.removeAllTags()

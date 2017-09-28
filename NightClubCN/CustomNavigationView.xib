@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="backButton" destination="hh3-Hw-ACP" id="u4X-4W-pOy"/>
                 <outlet property="bookMarkButton" destination="gaa-Gv-Zql" id="sK4-p6-8Wk"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="FR0-Az-saK"/>
                 <outlet property="searchButton" destination="JEv-6s-un4" id="cwW-Ow-cjZ"/>
                 <outlet property="shareButton" destination="vAC-3v-9fg" id="foI-y6-fyy"/>
                 <outlet property="titleLable" destination="gsV-Bt-NRN" id="Cbi-nn-3v8"/>
@@ -19,34 +20,34 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+            <rect key="frame" x="0.0" y="0.0" width="367" height="64"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fXu-ix-bGm">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <rect key="frame" x="0.0" y="0.0" width="367" height="64"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hh3-Hw-ACP">
-                            <rect key="frame" x="8" y="34" width="14" height="22"/>
+                            <rect key="frame" x="4" y="30" width="20" height="30"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="22" id="gCB-eL-86j"/>
-                                <constraint firstAttribute="width" constant="14" id="mxP-uA-2Zk"/>
+                                <constraint firstAttribute="height" constant="30" id="gCB-eL-86j"/>
+                                <constraint firstAttribute="width" constant="20" id="mxP-uA-2Zk"/>
                             </constraints>
-                            <state key="normal" image="back"/>
+                            <state key="normal" image="Close_Normal"/>
                             <connections>
                                 <action selector="backAction:" destination="-1" eventType="touchUpInside" id="b3z-qp-yny"/>
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsV-Bt-NRN">
-                            <rect key="frame" x="170.5" y="32" width="34.5" height="24"/>
-                            <fontDescription key="fontDescription" name="PingFangTC-Regular" family="PingFang TC" pointSize="17"/>
-                            <nil key="textColor"/>
+                            <rect key="frame" x="165" y="30.5" width="37.5" height="25.5"/>
+                            <fontDescription key="fontDescription" name="PingFangTC-Semibold" family="PingFang TC" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JEv-6s-un4">
-                            <rect key="frame" x="331" y="30" width="30" height="30"/>
+                            <rect key="frame" x="318" y="27.5" width="35" height="35"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="30" id="KYF-SX-gcG"/>
-                                <constraint firstAttribute="width" constant="30" id="Mgj-wY-MXl"/>
+                                <constraint firstAttribute="height" constant="35" id="KYF-SX-gcG"/>
+                                <constraint firstAttribute="width" constant="35" id="Mgj-wY-MXl"/>
                             </constraints>
                             <state key="normal" image="X341_Y32_Search"/>
                             <connections>
@@ -54,18 +55,21 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAC-3v-9fg">
-                            <rect key="frame" x="297" y="30" width="30" height="30"/>
+                            <rect key="frame" x="279" y="27.5" width="35" height="35"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="30" id="Jd3-G7-Vc9"/>
-                                <constraint firstAttribute="height" constant="30" id="iDK-FW-vg0"/>
+                                <constraint firstAttribute="width" constant="35" id="Jd3-G7-Vc9"/>
+                                <constraint firstAttribute="height" constant="35" id="iDK-FW-vg0"/>
                             </constraints>
                             <state key="normal" image="Share"/>
+                            <connections>
+                                <action selector="shareAction:" destination="-1" eventType="touchUpInside" id="ch6-gF-uO3"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaa-Gv-Zql">
-                            <rect key="frame" x="263" y="30" width="30" height="30"/>
+                            <rect key="frame" x="240" y="27.5" width="35" height="35"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="30" id="Kdc-QO-YUG"/>
-                                <constraint firstAttribute="height" constant="30" id="xAd-gh-jda"/>
+                                <constraint firstAttribute="width" constant="35" id="Kdc-QO-YUG"/>
+                                <constraint firstAttribute="height" constant="35" id="xAd-gh-jda"/>
                             </constraints>
                             <state key="normal" image="X297_Bookmark_Normal"/>
                             <state key="highlighted" image="X297_Bookmark_Active"/>
@@ -74,13 +78,13 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" red="0.094117647058823528" green="0.094117647058823528" blue="0.094100810587406158" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="64" id="4BC-nJ-HJI"/>
                         <constraint firstItem="gsV-Bt-NRN" firstAttribute="centerX" secondItem="fXu-ix-bGm" secondAttribute="centerX" id="7GF-XL-mG5"/>
                         <constraint firstItem="vAC-3v-9fg" firstAttribute="leading" secondItem="gaa-Gv-Zql" secondAttribute="trailing" constant="4" id="AV8-vL-AdO"/>
-                        <constraint firstItem="hh3-Hw-ACP" firstAttribute="leading" secondItem="fXu-ix-bGm" secondAttribute="leading" constant="8" id="Gso-ta-lp4"/>
-                        <constraint firstAttribute="bottom" secondItem="hh3-Hw-ACP" secondAttribute="bottom" constant="8" id="Hiz-N7-2Md"/>
+                        <constraint firstItem="hh3-Hw-ACP" firstAttribute="leading" secondItem="fXu-ix-bGm" secondAttribute="leading" constant="4" id="Gso-ta-lp4"/>
+                        <constraint firstAttribute="bottom" secondItem="hh3-Hw-ACP" secondAttribute="bottom" constant="4" id="Hiz-N7-2Md"/>
                         <constraint firstAttribute="trailing" secondItem="JEv-6s-un4" secondAttribute="trailing" constant="14" id="Q5I-bd-S0P"/>
                         <constraint firstItem="JEv-6s-un4" firstAttribute="leading" secondItem="vAC-3v-9fg" secondAttribute="trailing" constant="4" id="TNG-Bm-aFK"/>
                         <constraint firstItem="JEv-6s-un4" firstAttribute="centerY" secondItem="hh3-Hw-ACP" secondAttribute="centerY" id="Tlm-U6-XFp"/>
@@ -92,20 +96,20 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="fXu-ix-bGm" secondAttribute="bottom" id="4DR-fd-MSI"/>
                 <constraint firstAttribute="trailing" secondItem="fXu-ix-bGm" secondAttribute="trailing" id="dcc-7g-vzy"/>
                 <constraint firstItem="fXu-ix-bGm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="wEU-aq-HIy"/>
                 <constraint firstItem="fXu-ix-bGm" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="wv9-5W-8Y5"/>
+                <constraint firstAttribute="bottom" secondItem="fXu-ix-bGm" secondAttribute="bottom" id="y4a-KP-a6z"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-4.5" y="-236"/>
+            <point key="canvasLocation" x="-205.5" y="-716"/>
         </view>
     </objects>
     <resources>
+        <image name="Close_Normal" width="20" height="20"/>
         <image name="Share" width="19" height="28"/>
         <image name="X297_Bookmark_Active" width="20" height="24"/>
         <image name="X297_Bookmark_Normal" width="20" height="24"/>
         <image name="X341_Y32_Search" width="18" height="18"/>
-        <image name="back" width="13" height="22"/>
     </resources>
 </document>

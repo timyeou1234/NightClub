@@ -74,6 +74,9 @@
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <state key="normal" title="Ad" backgroundImage="X0_Y411_ADTag"/>
+                        <connections>
+                            <action selector="adAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="QY9-aL-dL4"/>
+                        </connections>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyo-pw-tlT">
                         <rect key="frame" x="337" y="270.5" width="30" height="30"/>

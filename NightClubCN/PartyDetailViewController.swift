@@ -45,7 +45,17 @@ class PartyDetailViewController: UIViewController, BackDelegate{
     }
     
     @IBAction func adAction(_ sender: Any) {
-    
+        if let url = party.ad_link{
+            guard let url = URL(string: url) else {
+                return //be safe
+            }
+            
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+        }
     }
 
     override func viewDidLoad() {
@@ -106,11 +116,48 @@ class PartyDetailViewController: UIViewController, BackDelegate{
             }
         }
     }
+    
+    func removeFavorite(){
+        let param: Parameters = [
+            "userid":User.user.id!,
+            "article_id":Int(id) ?? 0,
+            "type":1
+        ]
+        WebConfig.Manager.request("\(WebConfig.webUrl)favorite_remove", method: .post, parameters: param, encoding: URLEncoding.default, headers: WebConfig.headers).response { response in
+            if let data = response.data {
+                let json: JSON = JSON(data: data)
+                print(json)
+                
+                if let error = json["error"].bool{
+                    if error{
+                        return
+                    }
+                }
+            }
+        }
+    }
 
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func share(){
+        if let share = party.shareinfo{
+            let myWebsite = NSURL(string: share)
+            
+            guard let url = myWebsite else {
+                print("nothing found")
+                return
+            }
+            
+            let shareItems:Array = [url]
+            let activityViewController:UIActivityViewController = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
+            activityViewController.excludedActivityTypes = [UIActivityType.print, UIActivityType.postToWeibo, UIActivityType.copyToPasteboard, UIActivityType.addToReadingList, UIActivityType.postToVimeo]
+            activityViewController.popoverPresentationController?.sourceView = self.view
+            self.present(activityViewController, animated: true, completion: nil)
+        }
     }
     
     func back() {

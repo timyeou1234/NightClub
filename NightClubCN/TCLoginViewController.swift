@@ -13,10 +13,11 @@ import Alamofire
 
 class TCLoginViewController: UIViewController, LoginDelegate {
     
+    @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var fbButton: UIButton!
     @IBOutlet weak var wechatButton: UIButton!
     @IBOutlet weak var weiboButton: UIButton!
-
+    
     @IBAction func weiboLogin(_ sender: Any) {
         let request = WBAuthorizeRequest.request() as? WBAuthorizeRequest
         request?.redirectURI = "http://128.199.184.200"
@@ -38,6 +39,21 @@ class TCLoginViewController: UIViewController, LoginDelegate {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.loginDelegate = self
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let random = arc4random_uniform(10)
+        print(random)
+        if random % 2 == 1{
+            backgroundImage.image = #imageLiteral(resourceName: "matty-adame-274356")
+        }else{
+            backgroundImage.image = #imageLiteral(resourceName: "X0_Y0_BG")
+        }
+        
+        WechatManager.appid = "微信开放平台,注册的应用程序id"
+        WechatManager.appSecret = "微信开放平台,注册的应用程序Secret"
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

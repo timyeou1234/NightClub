@@ -17,12 +17,15 @@ class PartyPagerViewController: ButtonBarPagerTabStripViewController, PageChange
 
     override func viewDidLoad() {
         
-        self.settings.style.buttonBarItemTitleColor = UIColor(colorLiteralRed: 107/255, green: 126/255, blue: 238/255, alpha: 1)
-        self.settings.style.selectedBarBackgroundColor = UIColor(colorLiteralRed: 107/255, green: 126/255, blue: 238/255, alpha: 1)
+        self.settings.style.buttonBarItemTitleColor = UIColor(colorLiteralRed: 154/255, green: 154/255, blue: 154/255, alpha: 1)
+        
+        self.settings.style.selectedBarBackgroundColor = UIColor(colorLiteralRed: 255/255, green: 255/255, blue: 255/255, alpha: 1)
         self.settings.style.selectedBarHeight = 2
+        settings.style.buttonBarItemFont = UIFont.systemFont(ofSize: 14)
         self.settings.style.buttonBarBackgroundColor = UIColor.white
         self.settings.style.buttonBarMinimumLineSpacing = 0
-        settings.style.buttonBarItemBackgroundColor = .white
+        settings.style.buttonBarItemBackgroundColor = UIColor(colorLiteralRed: 24/255, green: 24/255, blue: 24/255, alpha: 1)
+        settings.style.selectedButtonTitleColor = .white
         super.viewDidLoad()
         
         buttonBarView.backgroundColor = UIColor.white

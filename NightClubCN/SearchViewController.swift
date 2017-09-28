@@ -105,11 +105,11 @@ extension SearchViewController:UITextFieldDelegate, UITableViewDelegate, UITable
                 if party.type == "1"{
                     let viewController = storyboard?.instantiateViewController(withIdentifier: "PartyDetailViewController") as! PartyDetailViewController
                     viewController.id = party.id!
-                    self.navigationController?.pushViewController(viewController, animated: true)
+                    self.present(viewController, animated: true, completion: nil)
                 }else{
                     let viewController = storyboard?.instantiateViewController(withIdentifier: "PartyNewsDetailViewController") as! PartyNewsDetailViewController
                     viewController.id = party.id!
-                    self.navigationController?.pushViewController(viewController, animated: true)
+                    self.present(viewController, animated: true, completion: nil)
                 }
             }else{
                 

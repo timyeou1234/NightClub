@@ -44,13 +44,11 @@ class VideoCollectionViewController: UIViewController, IndicatorInfoProvider {
     }
     
     func playStarted(){
-        AppUtility.lockOrientation(.landscape)
+        AppUtility.lockOrientation(.allButUpsideDown)
     }
     
     func playended(){
-        
         AppUtility.lockOrientation(.portrait, andRotateTo: .portrait)
-        
     }
 
 
@@ -91,6 +89,7 @@ extension VideoCollectionViewController: UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! VideoCollectionTableViewCell
         let video = videoList[indexPath.row]
+        cell.sourceViewController = self
         cell.video = video
         cell.selectionStyle = .none
         
@@ -125,6 +124,9 @@ extension VideoCollectionViewController{
                         }
                         if let ad_tag = video["ad_tag"].string{
                             videoDetail.ad_tag = ad_tag
+                        }
+                        if let ad_tag_link = video["ad_tag_link"].string{
+                            videoDetail.ad_link = ad_tag_link
                         }
                         if let title = video["title"].string{
                             videoDetail.title = title
@@ -167,10 +169,13 @@ struct AppUtility {
     
     // This method done pretty well where we can use this for best user experience.
     static func lockOrientation(_ orientation: UIInterfaceOrientationMask, andRotateTo rotateOrientation:UIInterfaceOrientation) {
+        DispatchQueue.main.async {
+            
         
-        self.lockOrientation(orientation)
+            self.lockOrientation(orientation)
         
-        UIDevice.current.setValue(rotateOrientation.rawValue, forKey: "orientation")
+            UIDevice.current.setValue(rotateOrientation.rawValue, forKey: "orientation")
+        }
     }
     
 }

@@ -12,16 +12,18 @@ import UIKit
     func back()
     @objc optional func search()
     @objc optional func favorite()
+    @objc optional func share()
     
 }
 
-@IBDesignable class CustomNavigationView: UIView {
+@IBDesignable public class CustomNavigationView: UIView {
     
     //該View
     var view:UIView!;
     //返回代理
     var backDelegate: BackDelegate?
     
+    @IBOutlet var contentView: UIView!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var titleLable: UILabel!
     @IBOutlet weak var bookMarkButton: UIButton!
@@ -41,6 +43,10 @@ import UIKit
         backDelegate?.favorite!()
     }
     
+    @IBAction func shareAction(_ sender: Any) {
+        backDelegate?.share!()
+    }
+    
     @IBInspectable var lblTitleText : String?
         {
         get{
@@ -48,7 +54,7 @@ import UIKit
         }
         set(lblTitleText)
         {
-            titleLable.text = lblTitleText!;
+            titleLable.text = lblTitleText;
         }
     }
     
@@ -84,12 +90,15 @@ import UIKit
         }
     }
     
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadViewFromNib ()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    
+    
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         loadViewFromNib ()
     }
@@ -97,17 +106,18 @@ import UIKit
     //做出View的Func
     func loadViewFromNib() {
         
-        let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName: "CustomNavigationView", bundle: bundle)
-        let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
-        view.frame = bounds
-        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+//        let bundles = Bundle(for: self.classForCoder)
+//        let bundle = Bundle(for: type(of: self))
+//        let nib = UINib(nibName: "CustomNavigationView", bundle: bundle)
+        Bundle.main.loadNibNamed("CustomNavigationView", owner: self, options: nil)
+//        let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
+        
+        contentView?.frame = bounds
+        contentView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 //        backIcon.frame = CGRect(x: backIcon.frame.origin.x , y: backIcon.frame.origin.y , width:  self.tittleImage.frame.height, height: self.tittleImage.frame.width)
-        self.addSubview(view);
-        bookMarkButton.setImage(#imageLiteral(resourceName: "X297_Bookmark_Active"), for: .selected)
-        bookMarkButton.setImage(#imageLiteral(resourceName: "X297_Bookmark_Normal"), for: .normal)
-        
-        
+//        bookMarkButton.setImage(#imageLiteral(resourceName: "X297_Bookmark_Active"), for: .selected)
+//        bookMarkButton.setImage(#imageLiteral(resourceName: "X297_Bookmark_Normal"), for: .normal)
+        addSubview(contentView)
     }
 
     /*

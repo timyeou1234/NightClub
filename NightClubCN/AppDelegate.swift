@@ -54,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate , BMKGeneralDelegate, Weib
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+        UIApplication.shared.statusBarStyle = .lightContent
         _mapManager = BMKMapManager()
         if BMKMapManager.setCoordinateTypeUsedInBaiduMapSDK(BMK_COORDTYPE_BD09LL) {
             NSLog("经纬度类型设置成功");

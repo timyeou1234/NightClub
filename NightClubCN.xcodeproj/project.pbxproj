@@ -70,6 +70,7 @@
 		6B49FFAB1F44A00800AF6DC9 /* StoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B49FFA91F44A00800AF6DC9 /* StoreTableViewCell.xib */; };
 		6B49FFAD1F454B8E00AF6DC9 /* StoreDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B49FFAC1F454B8E00AF6DC9 /* StoreDetailViewController.swift */; };
 		6B644F321F2359E000392DB8 /* VideoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B644F311F2359E000392DB8 /* VideoDetailViewController.swift */; };
+		6B6913AD1F5D82D500A12C1C /* localizationFile.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B6913AC1F5D82D500A12C1C /* localizationFile.strings */; };
 		6B704F6D1F4C4C0C00B93513 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B704F6C1F4C4C0C00B93513 /* SearchViewController.swift */; };
 		6B704F701F4C73A700B93513 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B704F6E1F4C73A700B93513 /* SearchTableViewCell.swift */; };
 		6B704F711F4C73A700B93513 /* SearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B704F6F1F4C73A700B93513 /* SearchTableViewCell.xib */; };
@@ -174,6 +175,9 @@
 		6B49FFA91F44A00800AF6DC9 /* StoreTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoreTableViewCell.xib; sourceTree = "<group>"; };
 		6B49FFAC1F454B8E00AF6DC9 /* StoreDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreDetailViewController.swift; sourceTree = "<group>"; };
 		6B644F311F2359E000392DB8 /* VideoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoDetailViewController.swift; sourceTree = "<group>"; };
+		6B6913AA1F5D7E9500A12C1C /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
+		6B6913AB1F5D7E9600A12C1C /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		6B6913AC1F5D82D500A12C1C /* localizationFile.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = localizationFile.strings; sourceTree = "<group>"; };
 		6B704F6C1F4C4C0C00B93513 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		6B704F6E1F4C73A700B93513 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		6B704F6F1F4C73A700B93513 /* SearchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchTableViewCell.xib; sourceTree = "<group>"; };
@@ -195,10 +199,6 @@
 		6B85CFC71F0A930900F1700E /* TagListView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TagListView.h; sourceTree = "<group>"; };
 		6B85CFC81F0A930900F1700E /* TagListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagListView.swift; sourceTree = "<group>"; };
 		6B85CFC91F0A930900F1700E /* TagView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
-		6BC6A4BF1F5BF07200659ED6 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Main.strings"; sourceTree = "<group>"; };
-		6BC6A4C01F5BF07200659ED6 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		6BC6A4C11F5BF08000659ED6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
-		6BC6A4C21F5BF08000659ED6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		A1D22B2D43BFD47AA92DBE82 /* Pods-NightClubCNTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NightClubCNTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NightClubCNTests/Pods-NightClubCNTests.release.xcconfig"; sourceTree = "<group>"; };
 		C1B8577AA06D6FE487CEF628 /* Pods-NightClubCN.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NightClubCN.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NightClubCN/Pods-NightClubCN.debug.xcconfig"; sourceTree = "<group>"; };
 		E4222D90B8E3E1D5C2CC65E3 /* Pods_NightClubCN.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NightClubCN.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -365,6 +365,7 @@
 				6B8500AB1F516F4E00C62DA7 /* User.swift */,
 				6B4435A51F04E31D0092D665 /* Main.storyboard */,
 				6B2FF1681F56F122008315D2 /* WelcomeViewController.swift */,
+				6B6913AC1F5D82D500A12C1C /* localizationFile.strings */,
 				6B71B5E91F0DE66200B0C141 /* LiveBroadcastViewController.swift */,
 				6B2FF16A1F56F52F008315D2 /* TCLoginViewController.swift */,
 				6B4435C41F04E6360092D665 /* LoginViewController.swift */,
@@ -493,10 +494,9 @@
 			};
 			buildConfigurationList = 6B4435991F04E31D0092D665 /* Build configuration list for PBXProject "NightClubCN" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = "zh-Hant";
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
 			);
 			mainGroup = 6B4435951F04E31D0092D665;
@@ -522,6 +522,7 @@
 				6B49FFA41F41D8C400AF6DC9 /* StarVideoCollectionViewCell.xib in Resources */,
 				6B4435AF1F04E31D0092D665 /* LaunchScreen.storyboard in Resources */,
 				6B2E0F911F3ADFB000B3566F /* ActionTableViewCell.xib in Resources */,
+				6B6913AD1F5D82D500A12C1C /* localizationFile.strings in Resources */,
 				6B85CFAE1F0A4F7A00F1700E /* PartyTableViewCell.xib in Resources */,
 				6B4435AC1F04E31D0092D665 /* Assets.xcassets in Resources */,
 				6B182CE71F235025004CA417 /* VideoCollectionTableViewCell.xib in Resources */,
@@ -744,8 +745,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				6B4435A61F04E31D0092D665 /* Base */,
-				6BC6A4BF1F5BF07200659ED6 /* zh-Hant */,
-				6BC6A4C11F5BF08000659ED6 /* zh-Hans */,
+				6B6913AA1F5D7E9500A12C1C /* zh-Hant */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -754,8 +754,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				6B4435AE1F04E31D0092D665 /* Base */,
-				6BC6A4C01F5BF07200659ED6 /* zh-Hant */,
-				6BC6A4C21F5BF08000659ED6 /* zh-Hans */,
+				6B6913AB1F5D7E9600A12C1C /* zh-Hant */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

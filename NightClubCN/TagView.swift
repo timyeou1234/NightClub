@@ -167,6 +167,7 @@ open class TagView: UIButton {
         setTitle(titleAtr, for: UIControlState())
         setImage(#imageLiteral(resourceName: "X224_Y625_Activity_Active"), for: UIControlState())
         imageView?.frame.size = CGSize(width: 10, height: 10)
+        imageView?.contentMode = .scaleAspectFit
         setupViewAttr()
     }
     

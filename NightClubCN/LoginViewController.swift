@@ -19,6 +19,10 @@ import Alamofire
 
 class LoginViewController: UIViewController, LoginDelegate {
     
+    @IBOutlet weak var backgroundImage: UIImageView!
+    @IBAction func laterAction(_ sender: Any) {
+        self.performSegue(withIdentifier: "showDetail", sender: nil)
+    }
     
     @IBAction func weiboLoginAction(_ sender: Any) {
         let request = WBAuthorizeRequest.request() as? WBAuthorizeRequest
@@ -51,6 +55,14 @@ class LoginViewController: UIViewController, LoginDelegate {
     
     
     override func viewDidAppear(_ animated: Bool) {
+        let random = arc4random_uniform(10)
+        print(random)
+        if random % 2 == 1{
+            backgroundImage.image = #imageLiteral(resourceName: "matty-adame-274356")
+        }else{
+            backgroundImage.image = #imageLiteral(resourceName: "BG")
+        }
+        
         WechatManager.appid = "微信开放平台,注册的应用程序id"
         WechatManager.appSecret = "微信开放平台,注册的应用程序Secret"
         

@@ -11,6 +11,7 @@ import UIKit
 class Video: NSObject {
     
     var id:String?
+    var ad_link:String?
     var platform:String?
     var video_number:String?
     var video_embed_path:String?

@@ -24,7 +24,9 @@ class VideoStreamDetailViewController: UIViewController , BackDelegate{
     override func viewWillAppear(_ animated: Bool) {
         NotificationCenter.default.addObserver(self, selector: #selector(playended), name: .UIWindowDidBecomeHidden, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(playStarted), name: .UIWindowDidBecomeVisible, object: nil)
-        
+        webView.allowsLinkPreview = true
+        webView.allowsPictureInPictureMediaPlayback = true
+        webView.allowsInlineMediaPlayback = true
         webView.stopLoading()
         
     }
@@ -37,8 +39,12 @@ class VideoStreamDetailViewController: UIViewController , BackDelegate{
         }
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     func playStarted(){
-        AppUtility.lockOrientation(.landscape)
+        AppUtility.lockOrientation(.allButUpsideDown)
     }
     
     func playended(){

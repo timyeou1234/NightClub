@@ -29,6 +29,20 @@ class PartyTableViewController: UIViewController, IndicatorInfoProvider{
     }
     
     @IBAction func shareAction(_ sender: Any) {
+        if let share = partyList[0].shareinfo{
+            let myWebsite = NSURL(string: share)
+            
+            guard let url = myWebsite else {
+                print("nothing found")
+                return
+            }
+            
+            let shareItems:Array = [url]
+            let activityViewController:UIActivityViewController = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
+            activityViewController.excludedActivityTypes = [UIActivityType.print, UIActivityType.postToWeibo, UIActivityType.copyToPasteboard, UIActivityType.addToReadingList, UIActivityType.postToVimeo]
+            activityViewController.popoverPresentationController?.sourceView = self.view
+            self.present(activityViewController, animated: true, completion: nil)
+        }
     }
     
     override func viewDidLoad() {
@@ -64,6 +78,7 @@ class PartyTableViewController: UIViewController, IndicatorInfoProvider{
     
     // MARK: - IndicatorInfoProvider
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
+        
         return self.itemInfo
     }
     
@@ -113,6 +128,7 @@ extension PartyTableViewController: UITableViewDelegate, UITableViewDataSource, 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PartyTableViewCell
         let party = partyList[indexPath.row]
+        cell.sourceViewController = self
         cell.party = party
         cell.titleLable.text = party.title
         cell.tagList.removeAllTags()
@@ -157,6 +173,9 @@ extension PartyTableViewController{
                         }
                         if let shareinfo = party["shareinfo"].string{
                             partyDetail.shareinfo = shareinfo
+                        }
+                        if let ad_tag_link = party["ad_tag_link"].string{
+                            partyDetail.ad_link = ad_tag_link
                         }
                         if let img = party["img"].string{
                             partyDetail.img = img

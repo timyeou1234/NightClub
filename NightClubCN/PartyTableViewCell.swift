@@ -10,7 +10,9 @@ import UIKit
 
 
 class PartyTableViewCell: UITableViewCell {
-
+    
+    var sourceViewController: UIViewController = UIViewController()
+    
     var party:Party = Party(){
         didSet{
             refresh()
@@ -21,8 +23,34 @@ class PartyTableViewCell: UITableViewCell {
     @IBOutlet weak var tagList: TagListView!
     @IBOutlet weak var titleLable: UILabel!
     @IBOutlet weak var adButton: UIButton!
+    @IBAction func adAction(_ sender: Any) {
+        if let url = party.ad_link{
+            guard let url = URL(string: url) else {
+                return //be safe
+            }
+            
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+        }
+    }
+    
     @IBAction func shareAction(_ sender: Any) {
+        // text to share
+        let text = party.shareinfo
         
+        // set up activity view controller
+        let textToShare = [ text ]
+        let activityViewController = UIActivityViewController(activityItems: textToShare, applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = sourceViewController.view // so that iPads won't crash
+        
+        // exclude some activity types from the list (optional)
+        activityViewController.excludedActivityTypes = [ UIActivityType.airDrop, UIActivityType.postToFacebook ]
+        
+        // present the view controller
+        sourceViewController.present(activityViewController, animated: true, completion: nil)
     }
     
     func refresh(){

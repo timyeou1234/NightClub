@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -61,6 +60,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Ad" backgroundImage="X0_Y411_ADTag"/>
+                                <connections>
+                                    <action selector="adAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="aCf-mB-6tH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x5V-Y3-gdw">
                                 <rect key="frame" x="282" y="123.5" width="30" height="30"/>
@@ -69,6 +71,9 @@
                                     <constraint firstAttribute="height" constant="30" id="xXj-BI-hgr"/>
                                 </constraints>
                                 <state key="normal" image="Share"/>
+                                <connections>
+                                    <action selector="shareAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Ouj-ws-dXq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="78c-ZJ-SjI">
                                 <rect key="frame" x="242" y="123.5" width="30" height="30"/>
@@ -77,6 +82,9 @@
                                     <constraint firstAttribute="width" constant="30" id="EWv-rV-aQO"/>
                                 </constraints>
                                 <state key="normal" image="X297_Bookmark_Normal"/>
+                                <connections>
+                                    <action selector="favoriteAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Ph9-p0-GQk"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -119,6 +127,7 @@
                 <outlet property="addrlable" destination="ckZ-bX-gWY" id="QU8-eY-3dg"/>
                 <outlet property="mainImageView" destination="4z0-tl-xlA" id="1tx-vT-g8W"/>
                 <outlet property="phoneButton" destination="b9q-mK-cmg" id="OZ3-wa-9Qx"/>
+                <outlet property="tagButton" destination="78c-ZJ-SjI" id="iGA-as-2P0"/>
                 <outlet property="timeLable" destination="cGm-1p-KCT" id="T47-2b-Ppv"/>
                 <outlet property="titleLable" destination="loT-m7-QHj" id="q8c-l8-vRo"/>
             </connections>
