@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIViewControllerBasedStatusBarAppearance</key>
-	<false/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>zh-Hant</string>
 	<key>CFBundleDisplayName</key>
@@ -34,7 +32,7 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>4</string>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>wechat</string>
@@ -53,11 +51,11 @@
 		<true/>
 	</dict>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>To get user&apos;s location</string>
+	<string>To get user's location</string>
 	<key>NSLocationUsageDescription</key>
-	<string>To get user&apos;s location</string>
+	<string>To get user's location</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>To get user&apos;s location</string>
+	<string>To get user's location</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Weibo Use</string>
 	<key>UILaunchStoryboardName</key>
@@ -79,5 +77,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>

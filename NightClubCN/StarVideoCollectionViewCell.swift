@@ -21,6 +21,7 @@ class StarVideoCollectionViewCell: UICollectionViewCell {
         if let urlString = star.videolink?[index]{
             if let _ = URL(string: urlString){
                 webView.isHidden = false
+                imageView.isHidden = true
             }
         }
     }
@@ -29,8 +30,8 @@ class StarVideoCollectionViewCell: UICollectionViewCell {
         webView.stopLoading()
         webView.isHidden = true
         if let urlString = star.videolink?[index]{
-            if let _ = URL(string: urlString){
-                webView.isHidden = false
+            if let url = URL(string: urlString){
+                webView.loadRequest(URLRequest(url: url))
             }
         }
         

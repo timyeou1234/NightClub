@@ -23,12 +23,54 @@ class StarDetailViewController: UIViewController, BackDelegate{
     @IBOutlet weak var sliderCollectionView: UICollectionView!
     @IBOutlet weak var videoCollectionView: UICollectionView!
     
+    @IBAction func websiteAction(_ sender: Any) {
+        if let url = star.icon_link3{
+            guard let url = URL(string: url) else {
+                return //be safe
+            }
+            
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+        }
+    }
+    
+    @IBAction func weiboAction(_ sender: Any) {
+        if let url = star.icon_link2{
+            guard let url = URL(string: url) else {
+                return //be safe
+            }
+            
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+        }
+    }
+    
+    @IBAction func wechatAction(_ sender: Any) {
+        if let url = star.icon_link1{
+            guard let url = URL(string: url) else {
+                return //be safe
+            }
+            
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+        }
+    }
     func refresh(){
         sliderCountLable.text = "1/\(star.imageArray?.count ?? 1)"
-        
+        navigation.lblTitleText = star.artist_name
         titleLable.text = star.artist_name
         contentLable.text = star.artist_desc
-        
+        self.sliderCollectionView.reloadData()
+        self.videoCollectionView.reloadData()
     }
     
     override func viewDidLoad() {
@@ -38,8 +80,11 @@ class StarDetailViewController: UIViewController, BackDelegate{
         sliderCollectionView.dataSource = self
         sliderCollectionView.delegate = self
         
+        videoCollectionView.delegate = self
+        videoCollectionView.dataSource = self
+        
         sliderCollectionView.register(UINib(nibName: "SliderImageCollectionViewCell", bundle:nil), forCellWithReuseIdentifier: "Cell")
-        videoCollectionView.register(UINib(nibName: "SliderImageCollectionViewCell", bundle:nil), forCellWithReuseIdentifier: "Cell")
+        videoCollectionView.register(UINib(nibName: "StarVideoCollectionViewCell", bundle:nil), forCellWithReuseIdentifier: "Cell1")
         
         // Do any additional setup after loading the view.
     }
@@ -83,6 +128,9 @@ extension StarDetailViewController:UICollectionViewDataSource, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        if collectionView == videoCollectionView{
+            return 5
+        }
         return 0
         
     }
@@ -97,7 +145,11 @@ extension StarDetailViewController:UICollectionViewDataSource, UICollectionViewD
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.view.bounds.width, height: collectionView.frame.height)
+        if collectionView == sliderCollectionView{
+            return CGSize(width: self.view.bounds.width, height: collectionView.frame.height)
+            
+        }
+        return CGSize(width: collectionView.frame.height, height: collectionView.frame.height)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -122,7 +174,7 @@ extension StarDetailViewController:UICollectionViewDataSource, UICollectionViewD
             
             return cell
         }else{
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! StarVideoCollectionViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell1", for: indexPath) as! StarVideoCollectionViewCell
             
             cell.titleLable.text = "影片\(indexPath.item)"
             cell.star = star
@@ -177,7 +229,7 @@ extension StarDetailViewController:UICollectionViewDataSource, UICollectionViewD
                                 self.star.videolink = [String]()
                             }
                             for imgHere in videolink{
-                                if let imgString = imgHere["img"].string{
+                                if let imgString = imgHere["link"].string{
                                     if imgString != ""{
                                         self.star.videolink?.append(imgString)
                                     }
@@ -190,9 +242,22 @@ extension StarDetailViewController:UICollectionViewDataSource, UICollectionViewD
                         if let artist_desc = star["artist_desc"].string{
                             self.star.artist_desc = artist_desc
                         }
+                        if let artist_desc = star["artist_desc"].string{
+                            self.star.artist_desc = artist_desc
+                        }
+                        if let icon_link1 = star["icon_link1"].string{
+                            self.star.icon_link1 = icon_link1
+                        }
+                        if let icon_link2 = star["icon_link2"].string{
+                            self.star.icon_link2 = icon_link2
+                        }
+                        if let icon_link3 = star["icon_link3"].string{
+                            self.star.icon_link3 = icon_link3
+                        }
+                        
                     }
                     self.refresh()
-                    self.sliderCollectionView.reloadData()
+                    
                 }
                 
             }

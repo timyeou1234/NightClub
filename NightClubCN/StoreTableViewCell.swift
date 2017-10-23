@@ -87,7 +87,7 @@ class StoreTableViewCell: UITableViewCell {
     }
     
     func refresh(){
-        tagButton.setImage(#imageLiteral(resourceName: "X297_Bookmark_Active"), for: .selected)
+        tagButton.setImage(#imageLiteral(resourceName: "X297_Bookmark_Normal-1"), for: .selected)
         tagButton.setImage(#imageLiteral(resourceName: "X297_Bookmark_Normal"), for: .normal)
         if store.list_img != nil{
             ImageUtils.loadImage(imageView: mainImageView, name: store.list_img!, completionHandler:{ (url, image) in

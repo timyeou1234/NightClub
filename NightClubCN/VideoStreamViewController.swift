@@ -18,6 +18,7 @@ class VideoStreamViewController: UIViewController, IndicatorInfoProvider {
     var videoList2 = [Video]()
     
     
+    @IBOutlet weak var pageIndex: UIPageControl!
     @IBOutlet weak var mainCollectionView: UICollectionView!
     @IBOutlet weak var subCollectionView: UICollectionView!
     
@@ -66,7 +67,13 @@ class VideoStreamViewController: UIViewController, IndicatorInfoProvider {
 
 }
 
-extension VideoStreamViewController:UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
+extension VideoStreamViewController:UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate{
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let cell = mainCollectionView.visibleCells[0]
+        let index = mainCollectionView.indexPath(for: cell)?.item
+        pageIndex.currentPage = index!
+    }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if collectionView == mainCollectionView{
@@ -78,7 +85,7 @@ extension VideoStreamViewController:UICollectionViewDataSource, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == mainCollectionView{
-            return CGSize(width: self.view.bounds.width * (270/375), height: mainCollectionView.bounds.height)
+            return CGSize(width: self.view.bounds.width, height: mainCollectionView.bounds.height)
         }else{
             return CGSize(width: self.view.bounds.width / 2 - 2.5, height: subCollectionView.bounds.height)
         }
@@ -86,6 +93,7 @@ extension VideoStreamViewController:UICollectionViewDataSource, UICollectionView
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == mainCollectionView{
+            pageIndex.numberOfPages = videoList.count
             return videoList.count
         }else{
             return videoList2.count

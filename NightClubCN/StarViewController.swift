@@ -146,6 +146,9 @@ class Star{
     var face_img:String?
     var wb_link:String?
     var created_at:String?
+    var icon_link1:String?
+    var icon_link2:String?
+    var icon_link3:String?
     
     var artist_desc:String?
     var imageArray:[String]?

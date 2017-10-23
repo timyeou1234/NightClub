@@ -16,6 +16,7 @@ class User: NSObject {
     var platform:Int?
     var accesstoken:String?
     var expire_in:String?
+    var inCn:Bool?
     
     var partyFavorite:[String]?
     var newsFavorite:[String]?

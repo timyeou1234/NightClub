@@ -27,7 +27,15 @@ class TCLoginViewController: UIViewController, LoginDelegate {
     }
     
     @IBAction func wechatLogin(_ sender: Any) {
-        self.performSegue(withIdentifier: "showDetail", sender: nil)
+        _ = WechatManager.shared.isInstalled()
+        WechatManager.shared.checkAuth { result in
+            switch result {
+            case .failure(let errCode)://登录失败
+                print(errCode)
+            case .success(let value)://登录成功 value为([String: String]) 从微信返回的openid access_token 以及 refresh_token
+                print(value)
+            }
+        }
     }
     
     @IBAction func laterAction(_ sender: Any) {
@@ -47,11 +55,11 @@ class TCLoginViewController: UIViewController, LoginDelegate {
         if random % 2 == 1{
             backgroundImage.image = #imageLiteral(resourceName: "matty-adame-274356")
         }else{
-            backgroundImage.image = #imageLiteral(resourceName: "X0_Y0_BG")
+            backgroundImage.image = #imageLiteral(resourceName: "BG")
         }
         
-        WechatManager.appid = "微信开放平台,注册的应用程序id"
-        WechatManager.appSecret = "微信开放平台,注册的应用程序Secret"
+        WechatManager.appid = "wxf6ebe900651a3d11"
+        WechatManager.appSecret = "178ab1082e3513311b4a1d900a07c603"
         
         
     }

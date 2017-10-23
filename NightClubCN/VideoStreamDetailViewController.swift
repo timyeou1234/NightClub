@@ -22,6 +22,7 @@ class VideoStreamDetailViewController: UIViewController , BackDelegate{
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
         NotificationCenter.default.addObserver(self, selector: #selector(playended), name: .UIWindowDidBecomeHidden, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(playStarted), name: .UIWindowDidBecomeVisible, object: nil)
         webView.allowsLinkPreview = true

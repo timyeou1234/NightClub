@@ -25,9 +25,22 @@ class StoreDetailViewController: UIViewController, BackDelegate{
     @IBOutlet weak var contentLable: UILabel!
     
     @IBAction func callAction(_ sender: Any) {
+        guard let number = URL(string: "tel://" + (store.tel ?? "")) else { return }
+        UIApplication.shared.openURL(number)
     }
     
     @IBAction func adAction(_ sender: Any) {
+        if let url = store.ad_tag{
+            guard let url = URL(string: url) else {
+                return //be safe
+            }
+            
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+        }
     }
     
     func refresh(){

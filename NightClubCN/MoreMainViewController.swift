@@ -7,13 +7,21 @@
 //
 
 import UIKit
+import SwiftyJSON
+import Alamofire
+import MessageUI
 
 class MoreMainViewController: UIViewController {
     
-    var actionList = ["我的書籤", "在 App Store 給好評", "開啟通知", "語言（簡中，繁中，英文）", "回報錯誤", "清除緩存", "聯絡我們"]
+    var appUrl:String?
+    var actionList = ["我的書籤", "在 App Store 給好評", "開啟通知", "語言（簡中，繁中，英文）", "回報錯誤", "登出", "聯絡我們"]
+    
+    @IBOutlet weak var fbView: UIView!
+    @IBOutlet weak var faWidthConstraint: NSLayoutConstraint!
+    
     
     @IBOutlet weak var actionTableView: UITableView!
-
+    
     @IBAction func discountAction(_ sender: Any) {
     }
     
@@ -34,38 +42,44 @@ class MoreMainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         actionTableView.dataSource = self
         actionTableView.delegate = self
         
         actionTableView.register(UINib(nibName: "ActionTableViewCell", bundle: nil), forCellReuseIdentifier: "Cell")
         
+        
         // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        getData()
+        if User.user.inCn!{
+            fbView.isHidden = true
+            fbView.frame = CGRect(x: fbView.frame.minX, y: fbView.frame.minY, width: fbView.frame.width / 2, height: fbView.frame.height)
+        }
         actionTableView.reloadData()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
     
-
+    
 }
 
-extension MoreMainViewController: UITableViewDelegate, UITableViewDataSource{
+extension MoreMainViewController: UITableViewDelegate, UITableViewDataSource, MFMailComposeViewControllerDelegate{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return self.actionTableView.bounds.height / 7
@@ -78,17 +92,41 @@ extension MoreMainViewController: UITableViewDelegate, UITableViewDataSource{
                 self.performSegue(withIdentifier: "favoriteSegue", sender: id)
             }
         case 1:
-        break
+            if let url = appUrl{
+                guard let url = URL(string: url) else {
+                    return //be safe
+                }
+                
+                if #available(iOS 10.0, *) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                } else {
+                    UIApplication.shared.openURL(url)
+                }
+            }
         case 2:
-        break
+            break
         case 3:
             self.performSegue(withIdentifier: "langSegue", sender: nil)
         case 4:
-            break
+            let composeVC = MFMailComposeViewController()
+            composeVC.mailComposeDelegate = self
+            
+            // Configure the fields of the interface.
+            composeVC.setSubject("Error Report")
+            
+            // Present the view controller modally.
+            self.present(composeVC, animated: true, completion: nil)
         case 5:
             break
         case 6:
-            break
+            let composeVC = MFMailComposeViewController()
+            composeVC.mailComposeDelegate = self
+            
+            // Configure the fields of the interface.
+            composeVC.setSubject("Contact us")
+            
+            // Present the view controller modally.
+            self.present(composeVC, animated: true, completion: nil)
         default:
             break
         }
@@ -111,4 +149,31 @@ extension MoreMainViewController: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     
+    func getData(){
+        
+        WebConfig.Manager.request("\(WebConfig.webUrl)appstore", method: .post, parameters: [:], encoding: URLEncoding.default, headers: WebConfig.headers).response { response in
+            if let data = response.data {
+                let json: JSON = JSON(data: data)
+                print(json)
+                
+                if let error = json["error"].bool{
+                    if error{
+                        return
+                    }
+                }
+                
+                if let data = json["data"].array{
+                    for url in data{
+                        if let url = url["item1"].string{
+                            self.appUrl = url
+                        }
+                    }
+                }
+                
+            }
+            
+            
+        }
+        
+    }
 }

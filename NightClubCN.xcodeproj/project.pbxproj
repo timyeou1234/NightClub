@@ -18,6 +18,7 @@
 		6B182CE71F235025004CA417 /* VideoCollectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B182CE51F235025004CA417 /* VideoCollectionTableViewCell.xib */; };
 		6B22D8381F20B72900DC8751 /* SliderImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B22D8361F20B72900DC8751 /* SliderImageCollectionViewCell.swift */; };
 		6B22D8391F20B72900DC8751 /* SliderImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B22D8371F20B72900DC8751 /* SliderImageCollectionViewCell.xib */; };
+		6B26F2861F7D59810087F475 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B26F2851F7D59810087F475 /* TabBarViewController.swift */; };
 		6B2802891F5BDFEA0094FA1D /* LangViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2802881F5BDFEA0094FA1D /* LangViewController.swift */; };
 		6B28028C1F5BE0BA0094FA1D /* LangTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B28028A1F5BE0BA0094FA1D /* LangTableViewCell.swift */; };
 		6B28028D1F5BE0BA0094FA1D /* LangTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B28028B1F5BE0BA0094FA1D /* LangTableViewCell.xib */; };
@@ -118,6 +119,7 @@
 		6B182CE51F235025004CA417 /* VideoCollectionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoCollectionTableViewCell.xib; sourceTree = "<group>"; };
 		6B22D8361F20B72900DC8751 /* SliderImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SliderImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		6B22D8371F20B72900DC8751 /* SliderImageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SliderImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		6B26F2851F7D59810087F475 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		6B2802881F5BDFEA0094FA1D /* LangViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LangViewController.swift; sourceTree = "<group>"; };
 		6B28028A1F5BE0BA0094FA1D /* LangTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LangTableViewCell.swift; sourceTree = "<group>"; };
 		6B28028B1F5BE0BA0094FA1D /* LangTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LangTableViewCell.xib; sourceTree = "<group>"; };
@@ -372,6 +374,7 @@
 				6B704F6C1F4C4C0C00B93513 /* SearchViewController.swift */,
 				6B704F6E1F4C73A700B93513 /* SearchTableViewCell.swift */,
 				6B704F6F1F4C73A700B93513 /* SearchTableViewCell.xib */,
+				6B26F2851F7D59810087F475 /* TabBarViewController.swift */,
 				6B2B81061F2A23AA00047B09 /* Func */,
 				6B2B810A1F2A23E800047B09 /* Map */,
 				6B85CFA61F0A33C800F1700E /* Party */,
@@ -670,6 +673,7 @@
 				6B85CFA11F0A318A00F1700E /* PartyTableViewController.swift in Sources */,
 				6B4435A41F04E31D0092D665 /* ViewController.swift in Sources */,
 				6B2B81051F2A215100047B09 /* NightClubFunc.swift in Sources */,
+				6B26F2861F7D59810087F475 /* TabBarViewController.swift in Sources */,
 				6B49FF9E1F419B6600AF6DC9 /* StarViewController.swift in Sources */,
 				6B4435C51F04E6360092D665 /* LoginViewController.swift in Sources */,
 				6B49FFAD1F454B8E00AF6DC9 /* StoreDetailViewController.swift in Sources */,

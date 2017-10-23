@@ -109,7 +109,10 @@ import UIKit
 //        let bundles = Bundle(for: self.classForCoder)
 //        let bundle = Bundle(for: type(of: self))
 //        let nib = UINib(nibName: "CustomNavigationView", bundle: bundle)
-        Bundle.main.loadNibNamed("CustomNavigationView", owner: self, options: nil)
+        let bundle = Bundle(for: CustomNavigationView.self)
+        let nib = UINib(nibName: String(describing: CustomNavigationView.self), bundle: bundle)
+        nib.instantiate(withOwner: self, options: nil)
+//        Bundle.main.loadNibNamed("CustomNavigationView", owner: self, options: nil)
 //        let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
         
         contentView?.frame = bounds

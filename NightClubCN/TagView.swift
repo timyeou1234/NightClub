@@ -165,7 +165,9 @@ open class TagView: UIButton {
     public init(titleAtr:String){
         super.init(frame: CGRect.zero)
         setTitle(titleAtr, for: UIControlState())
-        setImage(#imageLiteral(resourceName: "X224_Y625_Activity_Active"), for: UIControlState())
+        setImage(#imageLiteral(resourceName: "Pin"), for: UIControlState())
+        self.backgroundColor = UIColor.clear
+        imageView?.backgroundColor = UIColor.clear
         imageView?.frame.size = CGSize(width: 10, height: 10)
         imageView?.contentMode = .scaleAspectFit
         setupViewAttr()

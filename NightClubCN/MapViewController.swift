@@ -41,6 +41,8 @@ class MapViewController: UIViewController , BMKMapViewDelegate, CLLocationManage
         let from = BMKPlanNode()
         if let coor = searchPoint{
             from.pt = coor
+        }else{
+            from.pt = CLLocationCoordinate2D(latitude: Double(Location.userLocation.currentLat!)!, longitude: Double(Location.userLocation.currentLon!)!)
         }
         
         let to = BMKPlanNode()
@@ -101,7 +103,11 @@ class MapViewController: UIViewController , BMKMapViewDelegate, CLLocationManage
         detailView.isHidden = true
         routeButton.isHidden = true
         durationLable.isHidden = true
-        let center = CLLocationCoordinate2D(latitude: Double(Location.userLocation.currentLat!)!, longitude: Double(Location.userLocation.currentLon!)!)
+        var center = CLLocationCoordinate2D(latitude: 39.907488, longitude: 116.393745)
+        if Double(Location.userLocation.currentLat!)! >= 39.459900 && Double(Location.userLocation.currentLat!)! <= 41.045502 && Double(Location.userLocation.currentLon!)! >= 115.445238 && Double(Location.userLocation.currentLon!)! <= 117.356015{
+            center = CLLocationCoordinate2D(latitude: Double(Location.userLocation.currentLat!)!, longitude: Double(Location.userLocation.currentLon!)!)
+            
+        }
         //设置地图的显示范围（越小越精确）
         let span = BMKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
         //设置地图最终显示区域

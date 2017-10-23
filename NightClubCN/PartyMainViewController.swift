@@ -17,7 +17,6 @@ class PartyMainViewController: UIViewController, BackDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         navigetionView.backDelegate = self
         if User.user.id != nil{
             getFavorite()

@@ -104,7 +104,7 @@ class VideoCollectionTableViewCell: UITableViewCell {
     }
     
     func refresh(){
-        tagButton.setImage(#imageLiteral(resourceName: "X297_Bookmark_Active"), for: .selected)
+        tagButton.setImage(#imageLiteral(resourceName: "X297_Bookmark_Normal-1"), for: .selected)
         tagButton.setImage(#imageLiteral(resourceName: "X297_Bookmark_Normal"), for: .normal)
         if User.user.id == nil{
             

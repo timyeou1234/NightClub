@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="331"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="330.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="331"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tWb-Mx-io0">
@@ -27,20 +27,20 @@
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gmB-Sm-Fx9" customClass="TagListView" customModule="NightClubCN">
                         <rect key="frame" x="20" y="233" width="335" height="16"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" priority="250" constant="16" id="jat-ji-JdJ"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="16" id="tFc-B5-dlF"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                <color key="value" red="0.41463258862495422" green="0.48102593421936035" blue="0.9462699294090271" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="value" red="1" green="0.85257047414779663" blue="0.25164476037025452" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="selectedTextColor">
-                                <color key="value" red="0.41463258860000002" green="0.4810259342" blue="0.94626992939999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="value" red="0.99910980463027954" green="0.8535304069519043" blue="0.2536797821521759" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="tagBackgroundColor">
-                                <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="marginX">
                                 <real key="value" value="1"/>
@@ -53,7 +53,7 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsV-SD-aii">
                         <rect key="frame" x="20" y="256.5" width="335" height="20"/>
                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2C-5J-S5D">
@@ -79,6 +79,7 @@
                         </connections>
                     </button>
                 </subviews>
+                <color key="backgroundColor" red="0.094102360309999994" green="0.094126455489999997" blue="0.09410081059" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="gmB-Sm-Fx9" firstAttribute="top" secondItem="tWb-Mx-io0" secondAttribute="bottom" constant="4" id="1UA-Y8-g2G"/>
                     <constraint firstItem="b2C-5J-S5D" firstAttribute="top" secondItem="rsV-SD-aii" secondAttribute="bottom" constant="8" id="6Kf-8m-yzb"/>
