@@ -1,0 +1,6 @@
+framework module Pods_NightClubCN {
+  umbrella header "Pods-NightClubCN-umbrella.h"
+
+  export *
+  module * { export * }
+}

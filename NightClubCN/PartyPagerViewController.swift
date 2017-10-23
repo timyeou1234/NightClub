@@ -25,7 +25,7 @@ class PartyPagerViewController: ButtonBarPagerTabStripViewController, PageChange
         self.settings.style.buttonBarBackgroundColor = UIColor.white
         self.settings.style.buttonBarMinimumLineSpacing = 0
         settings.style.buttonBarItemBackgroundColor = UIColor(colorLiteralRed: 24/255, green: 24/255, blue: 24/255, alpha: 1)
-        settings.style.selectedButtonTitleColor = .white
+        settings.style.selectedBarBackgroundColor = .white
         super.viewDidLoad()
         
         buttonBarView.backgroundColor = UIColor.white
